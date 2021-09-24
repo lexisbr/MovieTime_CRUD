@@ -22,9 +22,6 @@
         <ul class="nav navbar-nav">
             <li id="registro"><a href="agregar.php">Registro</a></li>
             <li id="lista"><a href="visualizar.php">Lista</a></li>
-            <li id="editar"><a href="#" onclick="changeClass('editar','active')">Editar</a></li>
-            <li id="eliminar"><a href="#" onclick="changeClass('eliminar','active')">Eliminar</a></li>
-            <li id="fichar"><a href="#" onclick="changeClass('fichar','active')">Fichar</a></li>
         </ul>
     </div>
 </nav>
