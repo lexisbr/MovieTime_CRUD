@@ -2,6 +2,23 @@
 
 <?php include("includes/header.php") ?>
 
+<?php 
+if (isset($_SESSION['message'])) { ?>
+    <div class="alert-<?= $_SESSION['message_type'] ?>">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <?= $_SESSION['message'] ?>
+    </div>
+<?php session_unset();
+} ?>
+
+<?php 
+if (isset($_SESSION['message1'])) { ?>
+    <div class="alert-<?= $_SESSION['message_type1'] ?>">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <?= $_SESSION['message1'] ?>
+    </div>
+<?php session_unset();
+} ?>
 <div class="box3">
     <table class="table table-bordered">
         <thead>
@@ -27,7 +44,7 @@
                     <td><?php echo $row['category']; ?></td>
                     <td><?php echo $row['rating']; ?></td>
                     <td>
-                        <a href="editar.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">
+                        <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">
                             <i class="fas fa-marker"></i>
                         </a>
                         <a href="database/delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
